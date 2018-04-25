@@ -9,8 +9,8 @@ RUN apt-get update && apt-get install -y \
                               vim \
             && rm -rf /var/lib/apt/lists/*
 
-ENV KAFKA_VERSION 0.8.2.1
-ENV SCALA_VERSION 2.10
+ENV KAFKA_VERSION 1.1.0
+ENV SCALA_VERSION 2.11
 RUN wget -q \
     http://apache.mirrors.spacedump.net/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz \
     -O /tmp/kafka.tgz \
