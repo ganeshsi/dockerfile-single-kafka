@@ -13,7 +13,8 @@ fi
 if [ ! -z "${NUM_PARTITIONS}" ]; then
     sed -r -i "s/(num.partitions)=(.*)/\1=${NUM_PARTITIONS}/g" config/server.properties
 fi
-echo -e "\nauto.create.topics.enable=false" >> config/server.properties
+echo "" >> config/server.properties
+echo "auto.create.topics.enable=false" >> config/server.properties
 echo "advertised.host.name=$ADVERTISED_HOST" >> config/server.properties
 echo "advertised.port=$ADVERTISED_PORT" >> config/server.properties
 
