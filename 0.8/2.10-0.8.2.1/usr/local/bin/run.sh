@@ -14,6 +14,9 @@ if [ ! -z "${NUM_PARTITIONS}" ]; then
     sed -r -i "s/(num.partitions)=(.*)/\1=${NUM_PARTITIONS}/g" config/server.properties
 fi
 echo "auto.create.topics.enable=false" >> config/server.properties
+echo "advertised.host.name=$ADVERTISED_HOST" >> config/server.properties
+echo "advertised.port=$ADVERTISED_PORT" >> config/server.properties
+
 # Start to run zookeeper as background process
 bin/zookeeper-server-start.sh config/zookeeper.properties &
 
