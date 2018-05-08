@@ -20,7 +20,7 @@ RUN wget -q \
 
 
 ADD usr/local/bin/run.sh /usr/local/bin/run.sh
-
+ADD usr/local/bin/createTopics.sh /usr/local/bin/createTopics.sh
 WORKDIR /opt/kafka
 CMD ["/usr/local/bin/run.sh"]
 
