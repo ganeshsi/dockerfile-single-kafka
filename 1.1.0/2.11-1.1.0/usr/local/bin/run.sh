@@ -17,7 +17,9 @@ echo "" >> config/server.properties
 echo "auto.create.topics.enable=true" >> config/server.properties
 echo "advertised.host.name=$ADVERTISED_HOST" >> config/server.properties
 echo "advertised.port=$ADVERTISED_PORT" >> config/server.properties
-
+export KAFKA_PORT="$ADVERTISED_PORT"
+export KAFKA_HOME="./"
+export KAFKA_ZOOKEEPER_CONNECT="localhost:2181"
 # Start to run zookeeper as background process
 bin/zookeeper-server-start.sh config/zookeeper.properties &
 
