@@ -17,8 +17,8 @@ echo "" >> config/server.properties
 echo "auto.create.topics.enable=true" >> config/server.properties
 echo "advertised.host.name=$ADVERTISED_HOST" >> config/server.properties
 echo "advertised.port=$ADVERTISED_PORT" >> config/server.properties
-echo "listeners=OUTSIDE://:9094,INSIDE://:9092: >>config/server.properties
-echo "advertised.listeners=OUTSIDE://kafka:9094,INSIDE://localhost:9092" >>config/server.properties
+echo "listeners=OUTSIDE://:9094,INSIDE://:9092" >>config/server.properties
+echo "advertised.listeners=OUTSIDE://kafka:9094,INSIDE://$ADVERTISED_PORT:9092" >>config/server.properties
 echo "listener.security.protocol.map=INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT" >>config/server.properties
 export KAFKA_PORT="$ADVERTISED_PORT"
 export KAFKA_HOME="./"
