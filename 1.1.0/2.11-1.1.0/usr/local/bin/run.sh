@@ -22,6 +22,6 @@ export KAFKA_HOME="./"
 export KAFKA_ZOOKEEPER_CONNECT="localhost:2181"
 # Start to run zookeeper as background process
 bin/zookeeper-server-start.sh config/zookeeper.properties &
-sh /usr/local/bin/creatTopics.sh &
+sh /usr/local/bin/createTopics.sh &
 # Start kafka server
 bin/kafka-server-start.sh config/server.properties
