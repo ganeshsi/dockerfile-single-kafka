@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y \
                               zookeeper \
                               wget \
-                              netstat \
+                              net-tools \
                               dnsutils \
                               vim \
             && rm -rf /var/lib/apt/lists/*
